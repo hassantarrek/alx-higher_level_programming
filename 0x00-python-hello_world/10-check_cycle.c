@@ -8,19 +8,19 @@
 
 int check_cycle(listint_t *list)
 {
-	listint_t *s = list;
-	listint_t *f = list;
+	listint_t *x = list;
+	listint_t *y = list;
 
 	if (!list)
 	{
 		return (0);
 	}
 
-	while (s && f && f->next)
+	while (x && y && y->next)
 	{
-		s = s->next;
-		f = f->next->next;
-		if (s == f)
+		x = x->next;
+		y = y->next->next;
+		if (x == y)
 		{
 			return (1);
 		}
